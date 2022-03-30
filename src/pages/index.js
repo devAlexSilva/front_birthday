@@ -1,7 +1,8 @@
 import Head from 'next/head'
+import Link from 'next/link'
 import styles from '../styles/Home.module.css'
 
-export default function Home() {
+export default function Home () {
   return (
     <div className={styles.container}>
       <Head>
@@ -14,7 +15,7 @@ export default function Home() {
       </header>
 
       <main className={styles.main}>
-        
+
         <nav className={styles.nav}>
           <ul className={styles.ul}>
             <li className={styles.li}>nunca mais</li>
@@ -24,8 +25,12 @@ export default function Home() {
         </nav>
 
         <div className={styles.box_buttons}>
-          <button href='#'>Entrar</button>
-          <button href='#'>Registrar</button>
+          <Link href='/login'>
+            <button>Entrar</button>
+          </Link>
+          <Link href='/register'>
+            <button>Registrar</button>
+          </Link>
         </div>
 
       </main>
