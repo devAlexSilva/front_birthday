@@ -4,7 +4,7 @@ import Head from 'next/head'
 import Link from 'next/link';
 import { api } from '../api/axiosClientSide';
 import { useForm } from 'react-hook-form'
-import { parseCookies, setCookie } from 'nookies';
+import { setCookie } from 'nookies';
 
 
 export default function Login() {
@@ -17,16 +17,12 @@ export default function Login() {
 
     if (token) {
       setCookie(null, 'user', token, {
-        maxAge: 1800 // 30 minutos
+        maxAge: 1800 // 30 minutes
       })
-         
+
       Router.push('/dashBoard');
     }
-    /*
-    setCookie(null, 'info', loggedUser, {
-      maxAge: 1800,
-    })
-    */
+
   }
 
   return (
