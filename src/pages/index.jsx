@@ -17,11 +17,11 @@ export default function Home () {
       <main className={styles.main}>
 
         <nav className={styles.nav}>
-          <ul className={styles.ul}>
-            <li className={styles.li}>nunca mais</li>
-            <li className={styles.li}>esqueça</li>
-            <li className={styles.li}>os aniversários</li>
-          </ul>
+          <h1 className={styles.h1}>
+            <span className={styles.span}>nunca mais</span>
+            <span className={styles.span}>esqueça</span>
+            <span className={styles.span}>os aniversários</span>
+          </h1>
         </nav>
 
         <div className={styles.box_buttons}>

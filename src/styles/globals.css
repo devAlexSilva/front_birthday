@@ -1,7 +1,8 @@
 :root {
-  --color1: #0c0b0bea;
-  --color2: #504646ea;
-  --color3: #1d377eea;
+  --color-background: #000000f7;
+  --color-1: #038C65;
+  --color-2: #1d377eea;
+  --color-aside: #012E40;
 }
 
 html,

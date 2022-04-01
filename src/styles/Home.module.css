@@ -1,19 +1,19 @@
 .container {
-    background-color: var(--color1);
+    background-color: var(--color-background);
     height: 100vh;
     overflow-x: none;
+    color: #fff;
 }
 
 .header {
     width: 100%;
     height: 5vh;
-    color: var(--color3);
+    background-color: var(--color-aside);
     font-size: 1.6rem;
 }
 
 .main {
     height: 90vh;
-    background-color: var(--color2);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -21,18 +21,44 @@
 }
 
 .nav {
-    font-size: 5rem;
     margin-bottom: 8rem;
 }
 
-.ul {
+.h1 {
+    display: flex;
+    flex-direction: column;
     margin: 0;
     padding: 0;
-    list-style: none;
     text-align: center;
+    font-size: 8.5rem;
     font-weight: 800;
-    color: #fff;
+    font-family: Impact, 'Arial Narrow Bold', sans-serif;
+    line-height: 1.5;
+    word-spacing: 2rem;
 }
+
+.h1 .span {
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 0;
+    animation: textCool 6s ease-in-out infinite;
+}
+
+.h1 .span:nth-child(1) {
+    background-image: linear-gradient(90deg, #007cf0, #00dfd8);
+}
+
+.h1 .span:nth-child(2) {
+    background-image: linear-gradient(90deg, #7928ca, #ff0080);
+    animation-delay: 2s;
+}
+
+.h1 .span:nth-child(3) {
+    background-image: linear-gradient(90deg, #ff4d4d, #f9cb28);
+    animation-delay: 4s;
+}
+
 
 .box_buttons > button {
     margin: 0 4rem;
@@ -42,12 +68,18 @@
     letter-spacing: .35rem;
     border: none;
     border-radius: 5rem;
-    background-color: var(--color3);
+    background-color: var(--color-2);
     color: #fff;
+    cursor: pointer;
+
+    text-shadow:
+    0 0 .15rem #fff,
+    0 0 .30rem #0fa,
+    0 0 .60rem #0fa;
 }
 
 .box_buttons > button:nth-child(1) {
-    background-color: var(--color1);
+    background-color: var(--color-1);
 }
 
 .box_buttons > button:hover {
@@ -56,11 +88,25 @@
 
 .footer {
     width: 100%;
-    position: absolute;
-    bottom: .2rem;
-    margin-left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 1.6rem;
-    color: #fff;
+    background-color: var(--color-aside);
+}
+
+@keyframes textCool {
+    0% {
+        opacity: 0;
+    }
+
+    12% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
 }
