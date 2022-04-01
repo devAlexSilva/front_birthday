@@ -2,6 +2,8 @@ import { createContext, useEffect } from "react";
 import { destroyCookie } from 'nookies'
 import Router, { useRouter } from 'next/router'
 import NProgress from 'nprogress';
+import Header from "../components/header";
+import Footer from "../components/footer";
 
 
 export const AuthContext = createContext({})
@@ -38,7 +40,9 @@ export function AuthProvider({ children }) {
 
     return (
         <AuthContext.Provider value={{ cancelCookie }}>
+            <Header />
             {children}
+            <Footer />
         </AuthContext.Provider>
     )
 }

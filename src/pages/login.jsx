@@ -1,4 +1,4 @@
-import styles from '../styles/Home.module.css';
+import styles from '../styles/Login.module.css';
 import Router from 'next/router';
 import Head from 'next/head'
 import Link from 'next/link';
@@ -31,9 +31,14 @@ export default function Login() {
         <title>Login-Birthday</title>
       </Head>
       <section className={styles.section}>
+        <Link href='/'>
+          <button>
+            HOME
+          </button>
+        </Link>
         <form className={styles.form} onSubmit={handleSubmit(login)}>
 
-          <div>
+          <div className={styles.form_box}>
             <div className={styles.inputField}>
               <label htmlFor="email-address">
                 Email address
@@ -62,17 +67,10 @@ export default function Login() {
               />
             </div>
           </div>
-          <div className={styles.btnContainer}>
             <button>
               Login
             </button>
-          </div>
         </form>
-        <Link href='/'>
-          <button>
-            HOME
-          </button>
-        </Link>
       </section>
     </div>
   )
