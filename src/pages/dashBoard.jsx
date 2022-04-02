@@ -9,7 +9,7 @@ export default function DashBoard({ data }) {
 
 
     async function deleteMessage(id) {
-       console.log(id)
+        console.log(id)
         try {
             await api.delete(`/message/delete/${id}`)
                 .then(res => {
