@@ -41,21 +41,20 @@ export default function Login() {
           <div className={styles.form_box}>
             <div className={styles.inputField}>
               <label htmlFor="email-address">
-                Email address
+                Email
               </label>
               <input
                 {...register('email')}
                 id="email-address"
                 name="email"
                 type="email"
-                autoComplete="email"
                 required
                 placeholder="Email address"
               />
             </div>
             <div className={styles.inputField}>
               <label htmlFor="password">
-                Password
+                Senha
               </label>
               <input
                 {...register('password')}

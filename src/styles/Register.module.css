@@ -12,8 +12,8 @@
     background-color: var(--color-3);
     border: .1rem solid #fff;
     padding: 1rem;
-    height: 70vh;
-    width: 30vw;
+    height: 80vh;
+    width: 40vw;
     }
 
 .section > button {
@@ -30,7 +30,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 10rem auto 0; 
+    margin: 7rem auto 0; 
 }
 
 .form_box {
@@ -66,7 +66,7 @@
 
 @media (max-width:76.8rem) {
     .section {
-        width: 40vw;
+        width: 50vw;
     }
 }
 
