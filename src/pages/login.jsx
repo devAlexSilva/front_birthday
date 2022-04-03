@@ -15,13 +15,14 @@ export default function Login() {
 
     const { data: { token, loggedUser } } = await api.post('/login', { email, password });
 
-    if (token) {
+    (token) ? (
       setCookie(null, 'user', token, {
         maxAge: 1800 // 30 minutes
-      })
+      }),
 
-      Router.push('/dashBoard');
-    }
+      Router.push('/dashBoard')
+
+    ) : alert('usuário ou senha incorreto');
 
   }
 
@@ -66,9 +67,9 @@ export default function Login() {
               />
             </div>
           </div>
-            <button>
-              Login
-            </button>
+          <button>
+            Login
+          </button>
         </form>
       </section>
     </div>

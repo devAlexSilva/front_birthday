@@ -10,6 +10,10 @@ export default function CreateMessage() {
   const { register, handleSubmit } = useForm();
 
   async function create(dataForm) {
+
+    const dateLocal = dataForm.dateBirthday;
+    dataForm.dateBirthday = dateLocal.split('-').reverse().join('/');
+
     const { data } = await api.post('/message/create', dataForm);
 
     data.status === 201 ? Router.push('/dashBoard')
