@@ -25,16 +25,16 @@ export default function DashBoard({ data }) {
     return (
         <Layout>
             <section className={styles.section}>
-                <div>
                 {data.map(message => {
-                        return (
-                            <div key={message.id}>
-                                <ul>
-                                    <li>{message.title}</li>
-                                    <li>{message.content}</li>
-                                    <li>{message.dateBirthday}</li>
-                                </ul>
+                    return (
+                        <div className={styles.card} key={message.id}>
+                            <ul className={styles.card_info}>
+                                <li>{message.title}</li>
+                                <li>{message.content}</li>
+                                <li>{message.dateBirthday}</li>
+                            </ul>
 
+                            <div className={styles.card_buttons}>
                                 <Link href={`/message/update/:${message.id}`}>
                                     <button>
                                         Editar
@@ -44,9 +44,9 @@ export default function DashBoard({ data }) {
                                     Excluir
                                 </button>
                             </div>
-                        )
-                    })}
-                </div>
+                        </div>
+                    )
+                })}
             </section>
         </Layout>
     )

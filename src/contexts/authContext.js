@@ -32,9 +32,7 @@ export function AuthProvider({ children }) {
 
 
     const cancelCookie = async () => {
-        destroyCookie(null, 'tokenCardLink');
-        destroyCookie(null, 'cdlUser');
-
+        destroyCookie(null, 'user');
         Router.push('/');
     }
 
