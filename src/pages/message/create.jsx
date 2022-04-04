@@ -1,7 +1,6 @@
 import { useForm } from 'react-hook-form';
-import styles from '../../styles/Home.module.css'
+import styles from '../../styles/DashBoard.module.css'
 import Router from 'next/router';
-import Link from 'next/link';
 import { api } from '../../api/axiosClientSide';
 import Layout from '../../components/Layout'
 
@@ -22,57 +21,55 @@ export default function CreateMessage() {
 
   return (
     <Layout>
-      <div className={styles.body}>
-        <section className={styles.section}>
-          <form className={styles.form} onSubmit={handleSubmit(create)}>
+      <section className={styles.section}>
+        <form className={styles.card} onSubmit={handleSubmit(create)}>
 
-            <div>
-              <div className={styles.inputField}>
-                <label htmlFor="title">
-                  Titulo do Lembrete
-                </label>
-                <input
-                  {...register('title')}
-                  id="title"
-                  name="title"
-                  type="text"
-                  required
-                  placeholder="aniversário do Jhon"
-                />
-              </div>
-              <div className={styles.inputField}>
-                <label htmlFor="content">
-                  Descrição
-                </label>
-                <input
-                  {...register('content')}
-                  id="content"
-                  name="content"
-                  type="text"
-                  placeholder="Esse ano jhon vai querer uma taça nova"
-                />
-              </div>
-              <div className={styles.inputField}>
-                <label htmlFor="dateBirthday">
-                  Data do Aniversário
-                </label>
-                <input
-                  {...register('dateBirthday')}
-                  id="dateBirthday"
-                  name="dateBirthday"
-                  type="date"
-                  placeholder="20/02/1997"
-                />
-              </div>
-            </div>
-            <div className={styles.btnContainer}>
-              <button>
-                Salvar
-              </button>
-            </div>
-          </form>
-        </section>
-      </div>
+          <ul className={styles.card_info}>
+            <li className={styles.inputField}>
+              <label htmlFor="title">
+                Titulo do Lembrete
+              </label>
+              <input
+                {...register('title')}
+                id="title"
+                name="title"
+                type="text"
+                required
+                placeholder="aniversário do Jhon"
+              />
+            </li>
+            <li className={styles.inputField}>
+              <label htmlFor="content">
+                Descrição
+              </label>
+              <input
+                {...register('content')}
+                id="content"
+                name="content"
+                type="text"
+                placeholder="Esse ano jhon vai querer uma taça nova"
+              />
+            </li>
+            <li className={styles.inputField}>
+              <label htmlFor="dateBirthday">
+                Data do Aniversário
+              </label>
+              <input
+                {...register('dateBirthday')}
+                id="dateBirthday"
+                name="dateBirthday"
+                type="date"
+                placeholder="20/02/1997"
+              />
+            </li>
+          </ul>
+          <div className={styles.card_buttons}>
+            <button>
+              Salvar
+            </button>
+          </div>
+        </form>
+      </section>
     </Layout>
   )
 }

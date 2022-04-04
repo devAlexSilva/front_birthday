@@ -35,7 +35,7 @@ export default function DashBoard({ data }) {
                             </ul>
 
                             <div className={styles.card_buttons}>
-                                <Link href={`/message/update/:${message.id}`}>
+                                <Link href={`/message/update/${message.id}`}>
                                     <button>
                                         Editar
                                     </button>
