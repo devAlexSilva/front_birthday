@@ -27,8 +27,6 @@ export default function UpdateMessage({ id, data }) {
 
     data.status === 200 ? Router.push('/dashBoard')
       : alert('falha ao criar');
-
-    console.log(data)
   }
 
   return (
