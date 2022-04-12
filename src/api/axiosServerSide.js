@@ -5,7 +5,7 @@ import { parseCookies } from 'nookies';
 export function axiosClient(ctx){
 
 const api = axios.create({
-  baseURL: 'http://localhost:4001'
+  baseURL: 'https://birthdayweb.herokuapp.com',
 });
 
 
