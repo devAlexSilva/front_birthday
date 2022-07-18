@@ -13,7 +13,7 @@ export default function Login() {
 
   const login = async ({ email, password }) => {
 
-    const { data: { token, loggedUser } } = await api.post('/login', { email, password });
+    const { data: { token } } = await api.post('/login', { email, password });
 
     (token) ? (
       setCookie(null, 'user', token, {
