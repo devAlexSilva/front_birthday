@@ -15,7 +15,7 @@ export default function CreateMessage() {
 
     const { data } = await api.post('/message/create', dataForm);
 
-    data.status === 201 ? Router.push('/dashBoard')
+    data.status === 201 ? await Router.push('/dashBoard')
       : alert('falha ao criar');
   }
 
