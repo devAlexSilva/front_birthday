@@ -14,7 +14,7 @@ export default function CreateMessage() {
     dataForm.dateBirthday = dateLocal.split('-').reverse().join('/');
 
     const { data } = await api.post('/message/create', dataForm);
-
+    console.log('o status é: >> ', data.status)
     data.status === 201 ? await Router.push('/dashBoard')
       : alert('falha ao criar');
   }
